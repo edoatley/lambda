@@ -22,7 +22,7 @@ public class StringManipulationImproved implements StringManipulation {
 	}
 	public List<String> sortEsFirst(List<String> listOfStrings) {
 		return listOfStrings.stream()
-							.sorted((e1, e2) -> e1.contains("e") ? (e2.contains("e") ? 0 : -1) : 1)
+							.sorted((e1, e2) -> e1.contains("e") == e2.contains("e") ? 0 : ((e1.contains("e") ?  -1 : 1)))
 							.collect(Collectors.toList());
 		  
 	}

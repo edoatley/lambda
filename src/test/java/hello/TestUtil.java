@@ -15,6 +15,9 @@ public class TestUtil {
 		String prev =  list.get(0);
 		for (int i = 1; i < list.size(); i++) {
 			String curr = list.get(i);
+			
+			System.err.println("Comparing prev[" +  prev + "] with curr [" + curr + "] gives a comparator result " + comparator.compare(prev, curr));
+			
 			if (comparator.compare(prev, curr) > 0) {
 				return false;
 			}

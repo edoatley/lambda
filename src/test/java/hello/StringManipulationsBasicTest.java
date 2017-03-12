@@ -67,7 +67,7 @@ public class StringManipulationsBasicTest {
 		
 		System.err.println(result.toString());
 		assertTrue(TestUtil.stringListInSequence(result
-				  							   , (e1, e2) -> e1.contains("e") ? (e2.contains("e") ? 0 : -1) : 1 ));
+				  							   , (e1, e2) -> e1.contains("e") == e2.contains("e") ? 0 : ((e1.contains("e") ?  -1 : 1))));
 	}
 	
 	
