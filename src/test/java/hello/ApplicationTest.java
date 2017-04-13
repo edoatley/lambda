@@ -16,19 +16,19 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @SpringBootTest
 public class ApplicationTest {
 
-    @Autowired
-    private CommandLineRunner clr;
- 
-    @Rule
-    public OutputCapture outputCapture = new OutputCapture();
+	@Autowired
+	private CommandLineRunner clr;
 
-    @Test
-    public void thatCommandLineRunnerDoesStuff() throws Exception {
-        String expected = "It worked!";
-    	
-        this.clr.run();
-        String actual = this.outputCapture.toString();
-      
-        assertThat(actual, containsString(expected));
-    }
+	@Rule
+	public OutputCapture outputCapture = new OutputCapture();
+
+	@Test
+	public void thatCommandLineRunnerDoesStuff() throws Exception {
+		String expected = "It worked!";
+
+		this.clr.run();
+		String actual = this.outputCapture.toString();
+
+		assertThat(actual, containsString(expected));
+	}
 }
